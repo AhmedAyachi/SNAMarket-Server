@@ -5,16 +5,18 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --experimental-json-modules src/index.js"
   },
-  "author": "Ahmed Ayachi",
-  "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.19.2",
+    "body-parser": "^1.20.2",
+    "corella": "^0.0.4",
     "express": "^4.17.3",
     "express-graphql": "^0.12.0",
     "graphql": "^15.8.0",
-    "mongoose": "^6.2.3"
-  }
+    "graphqlutils": "file:../../../../Libraries/GraphQLUtils/graphqlutils-0.0.1.tgz",
+    "mongodb": "^6.1.0",
+    "sha256": "^0.2.0"
+  },
+  "author": "Ahmed Ayachi",
+  "license": "MIT"
 }

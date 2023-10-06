@@ -1,14 +1,15 @@
 import {GraphQLObjectType,GraphQLString,GraphQLID} from "graphql";
 import {PersonType} from "../index.js";
-import {User} from "../../Models/index.js";
+import DataBase from "../../../../../DataBase/index.js";
+import {GraphQLDate,GrapthQLTime} from "graphqlutils";
 
 
 export default new GraphQLObjectType({
     name:"Order",
     fields:()=>({
         id:{type:GraphQLID},
-        date:{type:GraphQLString},
-        time:{type:GraphQLString},
+        date:GraphQLDate({key:"date",required:true}),
+        time:GrapthQLTime({key:"time",required:true}),
         status:{
             type:GraphQLString,
             resolve:(order)=>{
@@ -23,7 +24,7 @@ export default new GraphQLObjectType({
         placer:{
             type:PersonType,
             resolve:async (order,args)=>{
-                const placer=await User.findOne({"orders.id":order.id});
+                const placer=await DataBase.userCollection.findOne({"orders.id":order.id});
                 return placer;
             },
         },
