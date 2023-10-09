@@ -1,5 +1,6 @@
 import {GraphQLObjectType,GraphQLString} from "graphql";
 import {GraphQLDate} from "graphqlutils";
+import { UserType } from "./index.js";
 
 
 export default new GraphQLObjectType({
@@ -11,6 +12,7 @@ export default new GraphQLObjectType({
             required:true,
             prettify:true,
         }),
+        user:{type:UserType},
         countryId:{type:GraphQLString},
     }),
 });

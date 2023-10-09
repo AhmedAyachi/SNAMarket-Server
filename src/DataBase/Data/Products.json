@@ -1,0 +1,332 @@
+[
+    {
+        "id": "dymapd00",
+        "name": "product 11",
+        "description": "product 11 description",
+        "type": "ruminants",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "dymapd01",
+        "name": "product 12",
+        "description": "product 12 description",
+        "type": "poultry",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "dymapd02",
+        "name": "product 13",
+        "description": "product 13 description",
+        "type": "rabbit",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "dymapd03",
+        "name": "product 14",
+        "description": "product 14 description",
+        "type": "ruminants",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "dymapd04",
+        "name": "product 15",
+        "description": "product 15 description",
+        "type": "poultry",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "barakapd10",
+        "name": "product 21",
+        "description": "product 21 description",
+        "type": "poultry",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "barakapd11",
+        "name": "product 22",
+        "description": "product 22 description",
+        "type": "rabbit",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "barakapd12",
+        "name": "product 23",
+        "description": "product 23 description",
+        "type": "ruminants",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "barakapd13",
+        "name": "product 24",
+        "description": "product 24 description",
+        "type": "poultry",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "barakapd14",
+        "name": "product 25",
+        "description": "product 25 description",
+        "type": "rabbit",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "brimapd20",
+        "name": "product 31",
+        "description": "product 31 description",
+        "type": "rabbit",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "brimapd21",
+        "name": "product 32",
+        "description": "product 32 description",
+        "type": "ruminants",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "brimapd22",
+        "name": "product 33",
+        "description": "product 33 description",
+        "type": "poultry",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "brimapd23",
+        "name": "product 34",
+        "description": "product 34 description",
+        "type": "rabbit",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "brimapd24",
+        "name": "product 35",
+        "description": "product 35 description",
+        "type": "ruminants",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "sianapd30",
+        "name": "product 41",
+        "description": "product 41 description",
+        "type": "ruminants",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "sianapd31",
+        "name": "product 42",
+        "description": "product 42 description",
+        "type": "poultry",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "sianapd32",
+        "name": "product 43",
+        "description": "product 43 description",
+        "type": "rabbit",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "sianapd33",
+        "name": "product 44",
+        "description": "product 44 description",
+        "type": "ruminants",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "sianapd34",
+        "name": "product 45",
+        "description": "product 45 description",
+        "type": "poultry",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "snapd40",
+        "name": "product 51",
+        "description": "product 51 description",
+        "type": "poultry",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "snapd41",
+        "name": "product 52",
+        "description": "product 52 description",
+        "type": "rabbit",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "snapd42",
+        "name": "product 53",
+        "description": "product 53 description",
+        "type": "ruminants",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "snapd43",
+        "name": "product 54",
+        "description": "product 54 description",
+        "type": "poultry",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "snapd44",
+        "name": "product 55",
+        "description": "product 55 description",
+        "type": "rabbit",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "bedypd50",
+        "name": "product 61",
+        "description": "product 61 description",
+        "type": "rabbit",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "bedypd51",
+        "name": "product 62",
+        "description": "product 62 description",
+        "type": "ruminants",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "bedypd52",
+        "name": "product 63",
+        "description": "product 63 description",
+        "type": "poultry",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "bedypd53",
+        "name": "product 64",
+        "description": "product 64 description",
+        "type": "rabbit",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    },
+    {
+        "id": "bedypd54",
+        "name": "product 65",
+        "description": "product 65 description",
+        "type": "ruminants",
+        "granularities": [
+            "0.22mm",
+            "0.33mm",
+            "0.5mm"
+        ]
+    }
+]

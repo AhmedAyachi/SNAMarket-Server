@@ -10,24 +10,18 @@ export default new GraphQLObjectType({
         order:{
             type:OrderType,
             args:{id:{type:new GraphQLNonNull(GraphQLID)}},
-            resolve:async (_,args)=>{
-                const {id}=args;
-                const user=await DataBase.userCollection.findOne({"orders.id":id});
-                if(user) return user.orders.find(order=>order.id===id);
-                else{
-                    throw new Error("no order witch such id");
-                }
+            resolve:async (_,args,context)=>{
+                const {id}=args,{user}=context;
+                const order=user.orders?.find(order=>order.id===id);
+                return order;
             },
         },
         user:{
             type:PersonType,
             args:{id:{type:new GraphQLNonNull(GraphQLID)}},
-            resolve:async (_,args)=>{
-                const user=await DataBase.userCollection.findOne({id:args.id});
-                if(user) return user;
-                else{
-                    throw new Error("no user with such id");
-                }
+            resolve:async (_,args,context)=>{
+                const {user}=context;
+                return user;
             },
         },
         orders:LazyDataField("orders",OrderType),

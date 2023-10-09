@@ -1,7 +1,8 @@
 import {MongoClient} from "mongodb";
 
 
-export {default as Session} from "./Session.js";
+export * from "./User/index.js";
+export {default as Product} from "./Product.js";
 
 const DataBase={
     connect:()=>MongoClient.connect("mongodb://localhost:27017/SNAMarket").
@@ -15,6 +16,12 @@ const DataBase={
         return Promise.reject(error);
     }),
     connection:null,
+    get brandCollection(){
+        return DataBase.connection.collection("Brands");
+    },
+    get productCollection(){
+        return DataBase.connection.collection("Products");
+    },
     get userCollection(){
         return DataBase.connection.collection("Users");
     },

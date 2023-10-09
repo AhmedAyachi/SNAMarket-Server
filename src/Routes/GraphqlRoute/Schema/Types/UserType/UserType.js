@@ -1,7 +1,5 @@
 import {GraphQLString,GraphQLID,GraphQLList} from "graphql";
-import {PersonType} from "../index.js";
-import OrderType from "./OrderType.js";
-import ComplaintType from "./ComplaintType.js";
+import {PersonType,OrderType,ComplaintType} from "../index.js";
 import {GraphQLExtendType} from "graphqlutils";
 
 
