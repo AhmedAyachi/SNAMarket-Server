@@ -1,10 +1,9 @@
 import {GraphQLList,GraphQLNonNull} from "graphql";
-import {GraphQLField} from "graphqlutils";
 import OrderItemType from "./OrderItemType.js";
 import {OrderType} from "../../Types/index.js";
 import {Product} from "../../../../../DataBase/index.js";
 
-export default GraphQLField({
+export default {
     type:OrderType,
     args:[
         {
@@ -33,4 +32,4 @@ export default GraphQLField({
         const order=await user.placeOrder(items);
         return order;
     },
-});
+};

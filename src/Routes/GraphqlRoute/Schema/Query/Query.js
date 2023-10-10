@@ -1,10 +1,10 @@
-import {GraphQLObjectType,GraphQLID,GraphQLNonNull} from "graphql";
+import {GraphQLID,GraphQLNonNull} from "graphql";
+import {GraphQLObject} from "graphqlutils";
 import {ComplaintType,OrderType,PersonType} from "../Types/index.js";
 import LazyDataField from "./LazyDataField.js";
-import DataBase from "../../../../DataBase/index.js";
 
 
-export default new GraphQLObjectType({
+export default GraphQLObject({
     name:"Querier",
     fields:{
         order:{

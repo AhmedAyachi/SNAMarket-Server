@@ -1,10 +1,9 @@
 import {GraphQLEnumType,GraphQLString} from "graphql";
-import {GraphQLField} from "graphqlutils";
 import {ComplaintType} from "../Types/index.js";
 import {Complaint} from "../../../../DataBase/index.js";
 
 
-export default GraphQLField({
+export default {
     type:ComplaintType,
     args:[
         {
@@ -35,4 +34,4 @@ export default GraphQLField({
         const complaint=await user.fileComplaint(args);
         return complaint;
     },
-});
+};

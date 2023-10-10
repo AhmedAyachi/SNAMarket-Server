@@ -2,9 +2,10 @@ import Person from "../Person.js";
 import Session from "./Session.js";
 import Order from "./Order.js";
 import Complaint from "./Complaint.js";
+import countries from "./Countries.json" assert {type:"json"};
 import DataBase from "../index.js";
 import {removeItem} from "corella";
-import {getId,getUserHash} from "../../Resources/index.js";
+import {getId,getUserHash,Error} from "../../Resources/index.js";
 
 
 export default class User extends Person {
@@ -12,9 +13,9 @@ export default class User extends Person {
         super(data);
         this.id=data.id;
         this.hash=data.hash;
-        this.sessions=data.sessions?.map($=>new Session($));
-        this.orders=data.orders?.map($=>new Order($));
-        this.complaints=data.complaints?.map($=>new Complaint($));
+        this.sessions=data.sessions?.map($=>new Session($))||[];
+        this.orders=data.orders?.map($=>new Order($))||[];
+        this.complaints=data.complaints?.map($=>new Complaint($))||[];
     }
 
     async fileComplaint(data){
@@ -61,10 +62,19 @@ export default class User extends Person {
         return session;
     }
 
-    static async findByCredentials(username,password){
+    static async add(data){
+        const {email,password}=data;
+        data.hash=getUserHash(email,password);
+        data.id=getId();
+        const user=new User(data);
+        await DataBase.userCollection.insertOne(user);
+        return user;
+    }
+
+    static async findByCredentials(email,password){
         let user=null;
-        if(username&&password){
-            const hash=getUserHash(username,password);
+        if(email&&User.isValidPassword(password)){
+            const hash=getUserHash(email,password);
             user=await DataBase.userCollection.findOne({hash});//alexhunter7482 ajdkhuf295472ad82
             if(user){user=new User(user)};
         }
@@ -78,5 +88,19 @@ export default class User extends Person {
             if(user){user=new User(user)};
         }
         return user;
+    }
+
+    static async emailExists(email){
+        return await DataBase.userCollection.countDocuments({email},{limit:1})>0;
+    }
+
+    static countries=countries;
+
+    static isValidPassword(value){//"Aapassword123"
+        return (
+            (typeof(value)==="string")&&
+            (value.length>=10)&&
+            (value.search(/[A-Z]/g)>=0)&&(value.search(/[0-9]/g)>=0)
+        );
     }
 }

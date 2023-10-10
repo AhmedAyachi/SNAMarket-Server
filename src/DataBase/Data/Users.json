@@ -5,6 +5,7 @@
         },
         "id":"1",
         "name":"patrick rothfuss",
+        "email":"patrickrothfuss@gmail.com",
         "birthdate":"6/6/1973",
         "countryId":"usa",
         "orders":[
@@ -21,6 +22,7 @@
         },
         "id":"2",
         "name":"brandon sanderson",
+        "email":"brandonsanderson@gmail.com",
         "birthdate":"19/12/1975",
         "countryId":"usa",
         "orders":[
@@ -42,6 +44,7 @@
         },
         "id":"3",
         "name":"terry pratchett",
+        "email":"terrypratchett@gmail.com",
         "birthdate":"28/4/1948",
         "countryId":"uk",
         "orders":[
@@ -67,7 +70,7 @@
             "$oid":"651f10bada8129751d9dc7d0"
         },
         "name":"alex hunter",
-        "username":"alexhunter7482",
+        "email":"alexhunter7482@gmail.com",
         "birthdate":"4/9/2007",
         "countryId":"uk",
         "hash":"07484c159d6d8a7b6160119ef543b313b457e8d32e3c90cf05d6ca152deed0b4",

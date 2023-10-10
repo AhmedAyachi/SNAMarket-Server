@@ -1,0 +1,26 @@
+[
+    {
+        "id":"uk",
+        "name":"united kingdom",
+        "code":44,
+        "telDigitRange":10
+    },
+    {
+        "id":"tn",
+        "name":"tunisia",
+        "code":216,
+        "telDigitRange":8
+    },
+    {
+        "id":"usa",
+        "name":"united states",
+        "code":1,
+        "telDigitRange":[10]
+    },
+    {
+        "id":"usa",
+        "name":"united arab emirates",
+        "code":971,
+        "telDigitRange":9
+    }
+]

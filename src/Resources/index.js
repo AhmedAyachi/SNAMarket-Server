@@ -5,7 +5,7 @@ export {default as Error} from "./Error.js";
 
 export const getId=()=>Math.random().toString(36).slice(2)+Math.random().toString(36).slice(2);
 export const getHash=(value)=>sha256(sha256(value));
-export const getUserHash=(username,password)=>getHash(username+password);
+export const getUserHash=(email,password)=>getHash(email+password);
 
 export const getTodate=()=>{
     const date=new Date(Date.now());

@@ -1,9 +1,9 @@
-import {GraphQLObjectType,GraphQLString,GraphQLID,GraphQLNonNull} from "graphql";
-import {GraphQLDate,GrapthQLTime} from "graphqlutils";
+import {GraphQLString,GraphQLID,GraphQLNonNull} from "graphql";
+import {GraphQLObject,GraphQLDate,GrapthQLTime} from "graphqlutils";
 import {Complaint} from "../../../../../DataBase/index.js";
 
 
-export default new GraphQLObjectType({
+export default GraphQLObject({
     name:"Complaint",
     fields:()=>({  
         id:{type:GraphQLID},

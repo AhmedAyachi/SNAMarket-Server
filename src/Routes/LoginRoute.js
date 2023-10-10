@@ -7,11 +7,11 @@ export default {
     endpoints:[{
         method:"POST",
         handler:async (request,response,next)=>{
-            let {username,password,deviceId}=request.body;
+            let {email,password,deviceId}=request.body;
             try{
-                username=username.trim();
+                email=email.trim();
                 deviceId=deviceId.trim();
-                const user=await User.findByCredentials(username,password);
+                const user=await User.findByCredentials(email,password);
                 if(user){
                     const session=await user.addSession(deviceId);
                     if(session){
@@ -22,7 +22,7 @@ export default {
                     }
                 }
                 else{
-                    throw new Error("");
+                    throw new Error("user not found");
                 }
             }
             catch(error){

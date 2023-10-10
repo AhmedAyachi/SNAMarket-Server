@@ -1,9 +1,9 @@
-import {GraphQLObjectType,GraphQLString} from "graphql";
-import {GraphQLDate} from "graphqlutils";
-import { UserType } from "./index.js";
+import {GraphQLString} from "graphql";
+import {GraphQLObject,GraphQLDate} from "graphqlutils";
+import {UserType} from "./index.js";
 
 
-export default new GraphQLObjectType({
+export default GraphQLObject({
     name:"Person",
     fields:()=>({
         name:{type:GraphQLString},

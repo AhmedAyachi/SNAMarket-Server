@@ -1,8 +1,9 @@
-import {GraphQLObjectType,GraphQLString,GraphQLID} from "graphql";
-import {GraphQLDate,GrapthQLTime,GraphQLField} from "graphqlutils";
+import {GraphQLString,GraphQLID} from "graphql";
+import {GraphQLObject} from "graphqlutils";
+import {GraphQLDate,GrapthQLTime} from "graphqlutils";
 
 
-export default new GraphQLObjectType({
+export default GraphQLObject({
     name:"Order",
     fields:()=>({
         id:{type:GraphQLID},

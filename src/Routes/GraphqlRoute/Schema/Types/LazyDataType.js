@@ -1,7 +1,8 @@
-import {GraphQLObjectType,GraphQLInt,GraphQLList} from "graphql";
+import {GraphQLInt,GraphQLList} from "graphql";
+import {GraphQLObject} from "graphqlutils";
 
 
-export default (type)=>new GraphQLObjectType({
+export default (type)=>GraphQLObject({
     name:`${type.name}LazyData`,
     fields:()=>({
         pageindex:{type:GraphQLInt},

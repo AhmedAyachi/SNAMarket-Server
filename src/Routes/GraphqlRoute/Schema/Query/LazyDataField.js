@@ -1,11 +1,10 @@
 import {GraphQLInt} from "graphql";
-import {GraphQLField} from "graphqlutils";
 import {LazyDataType} from "../Types/index.js";
 import DataBase from "../../../../DataBase/index.js";
 
 
 
-export default (name,type)=>GraphQLField({
+export default (name,type)=>({
     type:LazyDataType(type),
     args:{
         pageindex:{type:GraphQLInt},
