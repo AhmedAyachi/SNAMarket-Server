@@ -20,8 +20,8 @@ DataBase.connect().then(connection=>{
         });
     }();
     app.use((error,request,response,next)=>{
-        if(!error?.message){error=new Error("unknown error")};
-        response.status(error.statusCode||400).json({errors:[error]});
+        error=new Error(error?.message||"unknown error",error.code);
+        response.status(error.statusCode).json({errors:[error]});
     });
     app.listen(4000,()=>{
         console.log("server is up");

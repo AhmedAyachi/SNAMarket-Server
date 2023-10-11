@@ -1,7 +1,6 @@
 import {isEmail} from "corella";
 import {GraphQLDate} from "graphqlutils";
 import DataBase,{User} from "../DataBase/index.js";
-import {Error} from "../Resources/index.js";
 
 
 export default {
@@ -86,7 +85,7 @@ const validator={
                     if(Array.isArray(telDigitRange)){[min,max]=telDigitRange}
                     else{min=max=telDigitRange}; 
                     if((length<min)||(max&&(max<length))){
-                        throw new Error("invalid country phone number");
+                        throw new Error("invalid country phone number length");
                     }
                     data.tel=tel;
                 }
