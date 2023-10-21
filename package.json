@@ -9,13 +9,15 @@
   },
   "dependencies": {
     "body-parser": "^1.20.2",
-    "corella": "^0.0.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "express": "^4.17.3",
     "express-graphql": "^0.12.0",
     "graphql": "^15.8.0",
     "graphqlutils": "file:../../../../Libraries/GraphQLUtils/graphqlutils-0.0.1.tgz",
     "mongodb": "^6.1.0",
-    "sha256": "^0.2.0"
+    "sha256": "^0.2.0",
+    "vritra": "^0.0.1"
   },
   "author": "Ahmed Ayachi",
   "license": "MIT"

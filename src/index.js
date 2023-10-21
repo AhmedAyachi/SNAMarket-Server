@@ -1,6 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
-import * as routes from "./routes/index.js";
+import cookieParser from "cookie-parser";
+import cors from "cors";
+import * as routes from "./Routes/index.js";
 import DataBase from "./DataBase/index.js";
 import {Error} from "./Resources/index.js";
 
@@ -8,6 +10,8 @@ import {Error} from "./Resources/index.js";
 DataBase.connect().then(connection=>{
     const app=express();
     app.use(bodyParser.json());
+    app.use(cookieParser());
+    app.use(cors());
     !function setAppRoutes(){
         Object.values(routes).forEach(route=>{
             const {path,endpoints}=route;

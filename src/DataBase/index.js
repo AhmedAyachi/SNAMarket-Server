@@ -16,6 +16,12 @@ const DataBase={
         return Promise.reject(error);
     }),
     connection:null,
+    get producttypesCollection(){
+        return DataBase.connection.collection("ProductTypes");
+    },
+    get languageCollection(){
+        return DataBase.connection.collection("Languages");
+    },
     get brandCollection(){
         return DataBase.connection.collection("Brands");
     },

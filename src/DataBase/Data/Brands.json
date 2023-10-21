@@ -1,7 +1,8 @@
 [
     {
         "id": "dyma",
-        "logo": "DymaLogo_0_abda0620dcd064c5450b177bacb78ac7.png",
+        "name":"dyma",
+        "logo": "DymaLogo_0.png",
         "productIds": [
             "dymapd00",
             "dymapd01",
@@ -12,7 +13,8 @@
     },
     {
         "id": "baraka",
-        "logo": "BarakaLogo_0_c805aa81a544088c2bc44a330a6014c5.png",
+        "name":"baraka",
+        "logo": "BarakaLogo_0.png",
         "productIds": [
             "barakapd10",
             "barakapd11",
@@ -23,7 +25,8 @@
     },
     {
         "id": "brima",
-        "logo": "BrimaLogo_0_29bb7acc69f5e7c12887074651a147c7.png",
+        "name":"brima",
+        "logo": "BrimaLogo_0.png",
         "productIds": [
             "brimapd20",
             "brimapd21",
@@ -34,7 +37,8 @@
     },
     {
         "id": "siana",
-        "logo": "SianaLogo_0_574a12e74d6644fc2c605d72746e362b.png",
+        "name": "siana",
+        "logo": "SianaLogo_0.png",
         "productIds": [
             "sianapd30",
             "sianapd31",
@@ -45,7 +49,8 @@
     },
     {
         "id": "sna",
-        "logo": "SNALogo_0_9897629e68ba6b6d243ed306a791b4f0.png",
+        "name": "sna",
+        "logo": "SNALogo_0.png",
         "productIds": [
             "snapd40",
             "snapd41",
@@ -56,7 +61,8 @@
     },
     {
         "id": "bedy",
-        "logo": "BedyLogo_0_77664488f7ef63763a17a4def30ea6a8.png",
+        "name": "bedy",
+        "logo": "BedyLogo_0.png",
         "productIds": [
             "bedypd50",
             "bedypd51",

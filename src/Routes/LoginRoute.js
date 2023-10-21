@@ -15,7 +15,10 @@ export default {
                 if(user){
                     const session=await user.addSession(deviceId);
                     if(session){
-                        response.json({sessionId:session.id});
+                        response.json({
+                            userId:user.id,
+                            sessionId:session.id,
+                        });
                     }
                     else{
                         throw new Error("user has already started a session on this device");

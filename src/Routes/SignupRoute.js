@@ -1,10 +1,10 @@
-import {isEmail} from "corella";
-import {GraphQLDate} from "graphqlutils";
+import {isEmail} from "vritra";
+import GraphQLUtils from "graphqlutils";
 import DataBase,{User} from "../DataBase/index.js";
 
 
 export default {
-    path:"/signin",
+    path:"/signup",
     endpoints:[{
         method:"POST",
         handler:async (request,response,next)=>{
@@ -18,9 +18,9 @@ export default {
                         throw new Error(`invalid ${key}`);
                     }
                 }
-                const user=await User.add(data);
+                //const user=await User.add(data);
                 response.json({
-                    email:user.email,
+                    email:data.email,
                     password:data.password,
                 });
             }
@@ -61,7 +61,7 @@ const validator={
     },
     birthdate:(value="")=>{
         try{
-            value=GraphQLDate({
+            value=GraphQLUtils.GraphQLDate({
                 srcType:"string",
                 srcFormat:"dmy",
                 prettify:false,

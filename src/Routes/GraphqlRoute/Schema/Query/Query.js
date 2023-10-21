@@ -2,11 +2,13 @@ import {GraphQLID,GraphQLNonNull} from "graphql";
 import {GraphQLObject} from "graphqlutils";
 import {ComplaintType,OrderType,PersonType} from "../Types/index.js";
 import LazyDataField from "./LazyDataField.js";
+import checkCart from "./checkCart.js";
 
 
 export default GraphQLObject({
     name:"Querier",
     fields:{
+        checkCart,
         order:{
             type:OrderType,
             args:{id:{type:new GraphQLNonNull(GraphQLID)}},
@@ -18,7 +20,7 @@ export default GraphQLObject({
         },
         user:{
             type:PersonType,
-            args:{id:{type:new GraphQLNonNull(GraphQLID)}},
+            //args:{id:{type:new GraphQLNonNull(GraphQLID)}},
             resolve:async (_,args,context)=>{
                 const {user}=context;
                 return user;

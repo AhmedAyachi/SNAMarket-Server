@@ -1,6 +1,6 @@
-import {GraphQLString,GraphQLID} from "graphql";
-import {GraphQLObject} from "graphqlutils";
-import {GraphQLDate,GrapthQLTime} from "graphqlutils";
+import {GraphQLString,GraphQLID,GraphQLList} from "graphql";
+import {GraphQLObject,GraphQLDate,GrapthQLTime} from "graphqlutils";
+import OrderItemType from "./OrderItemType.js";
 
 
 export default GraphQLObject({
@@ -26,5 +26,6 @@ export default GraphQLObject({
                 }
             },
         },
+        items:{type:new GraphQLList(OrderItemType)},
     }),
 });

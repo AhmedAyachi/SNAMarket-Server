@@ -1,0 +1,14 @@
+[
+    {
+        "id":"ruminants",
+        "brandIds":["dyma","baraka","brima","siana","sna","bedy"]
+    },
+    {
+        "id":"poultry",
+        "brandIds":["dyma","baraka","brima","siana","sna","bedy"]
+    },
+    {
+        "id":"rzbbit",
+        "brandIds":["dyma","baraka","brima","siana","sna","bedy"]
+    }
+]

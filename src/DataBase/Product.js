@@ -18,4 +18,6 @@ export default class Product {
         }
         return products;
     }
+
+    static types=["ruminants","poultry","rabbit"];
 }
