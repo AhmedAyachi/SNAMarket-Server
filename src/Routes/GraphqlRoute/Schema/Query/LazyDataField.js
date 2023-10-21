@@ -18,10 +18,11 @@ export default (name,type)=>({
         const {pagecount}=context;
         const start=pageindex*statics.step;
         const items=data.slice(start,start+statics.step);
-        return {
-            pageindex:pageindex>pagecount?pagecount:pageindex,
+        const lazydata={
+            pageindex:pageindex>pagecount?pagecount:Math.max(0,pageindex),
             pagecount,items,
         };
+        return lazydata;
     },
     pagecount:null,
 });

@@ -5,6 +5,7 @@ import DataBase from "./index.js";
 export default class Product {
     constructor(data={}){
         this.id=data.id;
+        this.name=data.name;
         this.granularities=data.granularities; 
     }
 

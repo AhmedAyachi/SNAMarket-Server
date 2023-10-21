@@ -5,18 +5,10 @@ import {GraphQLInt,GraphQLString,GraphQLNonNull,GraphQLID,GraphQLObjectType} fro
 export default GraphQLObject({
     name:"OrderItem",
     fields:()=>({
+        ref:{type:new GraphQLNonNull(GraphQLID)},
+        name:{type:GraphQLString},
         quantity:{type:new GraphQLNonNull(GraphQLInt)},
-        unit:{
-            type:GraphQLID,
-            /* resolve:(parent,args)=>{
-                const {unit}=parent;
-                if(!units.includes(unit)){throw new Error(`unit is not in ${JSON.stringify(unit)}`)}
-                else return unit;
-            }, */
-        },
+        unit:{type:GraphQLID},
         granularity:{type:new GraphQLNonNull(GraphQLString)},
-        productId:{type:new GraphQLNonNull(GraphQLString)},
     }),
 });
-
-//const units=["kg","t"];

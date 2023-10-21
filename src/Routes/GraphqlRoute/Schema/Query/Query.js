@@ -2,13 +2,13 @@ import {GraphQLID,GraphQLNonNull} from "graphql";
 import {GraphQLObject} from "graphqlutils";
 import {ComplaintType,OrderType,PersonType} from "../Types/index.js";
 import LazyDataField from "./LazyDataField.js";
-import checkCart from "./checkCart.js";
+import isValidCart from "./IsValidCartField.js";
 
 
 export default GraphQLObject({
     name:"Querier",
     fields:{
-        checkCart,
+        isValidCart,
         order:{
             type:OrderType,
             args:{id:{type:new GraphQLNonNull(GraphQLID)}},

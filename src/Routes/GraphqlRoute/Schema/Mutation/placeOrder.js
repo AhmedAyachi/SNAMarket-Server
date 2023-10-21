@@ -1,13 +1,13 @@
 import {OrderType} from "../Types/index.js";
-import checkCart from "../Query/checkCart.js";
+import IsValidCartField from "../Query/IsValidCartField.js";
 
 
 export default {
     type:OrderType,
-    args:checkCart.args,
+    args:IsValidCartField.args,
     resolve:async (parent,args,context,info)=>{
         const {items}=args,{user}=context;
-        const order=await user.placeOrder(items);
+        const order=items&&await user.placeOrder(items);
         return order;
     },
 };
