@@ -1,4 +1,4 @@
-import {GraphQLEnumType,GraphQLString} from "graphql";
+import {GraphQLString} from "graphql";
 import {ComplaintType} from "../Types/index.js";
 import {Complaint} from "../../../../DataBase/index.js";
 
@@ -8,12 +8,12 @@ export default {
     args:[
         {
             name:"subject",
-            type:new GraphQLEnumType({
-                name:"Subject",
-                values:Object.fromEntries(Complaint.subjects.map(({name})=>[name,{}])),
-            }),
+            type:GraphQLString,
             resolve:(value)=>{
-                const subject=Complaint.subjects.find(({name})=>name===value);
+                const subject=Complaint.subjects.find(({id})=>id===value);
+                if(!subject){
+                    throw new Error("invalid subject");
+                }
                 return subject.id;
             },
         },

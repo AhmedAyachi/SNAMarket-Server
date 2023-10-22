@@ -10,14 +10,12 @@ export default {
         method:"use",
         handler:[
             findUserHandler,
-            (request,response,next)=>{
-                return graphqlHTTP({
-                    schema:Schema,
-                    graphiql:true,
-                    context:response.locals,
-                    customFormatErrorFn:(error)=>new Error(error.message),
-                })(request,response);
-            },
+            (request,response,next)=>graphqlHTTP({
+                schema:Schema,
+                graphiql:true,
+                context:response.locals,
+                customFormatErrorFn:(error)=>new Error(error.message),
+            })(request,response),
         ],
     }],
 }

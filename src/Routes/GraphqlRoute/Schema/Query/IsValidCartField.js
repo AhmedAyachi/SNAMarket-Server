@@ -4,6 +4,7 @@ import {Product} from "../../../../DataBase/index.js";
 
 
 export default {
+    name:"isValidCart",
     type:OrderType,
     args:[
         {
