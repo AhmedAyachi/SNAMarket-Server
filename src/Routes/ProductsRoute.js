@@ -11,7 +11,7 @@ export default {
             const brand=await DataBase.brandCollection.findOne({id:brandId});
             if(brand){
                 const {productIds}=brand;
-                const products=await DataBase.productCollection.find({id:{$in:productIds},type},{limit:productIds.length}).toArray();
+                const products=await DataBase.productCollection.find({id:{$in:productIds},type},{limit:30}).toArray();
                 response.json(products);
             }
             else{
