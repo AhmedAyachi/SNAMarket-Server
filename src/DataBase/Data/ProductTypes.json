@@ -1,14 +1,42 @@
-[
-    {
-        "id":"ruminants",
-        "brandIds":["dyma","baraka","brima","siana","sna","bedy"]
-    },
-    {
-        "id":"poultry",
-        "brandIds":["dyma","baraka","brima","siana","sna","bedy"]
-    },
-    {
-        "id":"rzbbit",
-        "brandIds":["dyma","baraka","brima","siana","sna","bedy"]
-    }
-]
+[{
+  "_id": {
+    "$oid": "652ff88f50b13c01acd21fdc"
+  },
+  "id": "ruminants",
+  "brandIds": [
+    "dyma",
+    "baraka",
+    "brima",
+    "siana",
+    "sna",
+    "bedy"
+  ]
+},
+{
+  "_id": {
+    "$oid": "652ff88f50b13c01acd21fdd"
+  },
+  "id": "poultry",
+  "brandIds": [
+    "dyma",
+    "baraka",
+    "brima",
+    "siana",
+    "sna",
+    "bedy"
+  ]
+},
+{
+  "_id": {
+    "$oid": "652ff88f50b13c01acd21fde"
+  },
+  "id": "rabbit",
+  "brandIds": [
+    "dyma",
+    "baraka",
+    "brima",
+    "siana",
+    "sna",
+    "bedy"
+  ]
+}]

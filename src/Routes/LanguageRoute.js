@@ -15,7 +15,7 @@ export default {
             async (request,response)=>{
                 const {user}=response.locals;
                 const langId=user?request.body.langId:"fr";
-                const language=await DataBase.languageCollection.findOne({$id:langId});
+                const language=langId&&await DataBase.languageCollection.findOne({_code:langId},{_id:0});
                 response.json(language);
             },
         ],

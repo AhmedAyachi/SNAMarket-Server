@@ -12,6 +12,7 @@ DataBase.connect().then(connection=>{
     app.use(bodyParser.json());
     app.use(cookieParser());
     app.use(cors());
+    app.use("/public",express.static("public",{}));
     !function setAppRoutes(){
         Object.values(routes).forEach(route=>{
             const {path,endpoints}=route;

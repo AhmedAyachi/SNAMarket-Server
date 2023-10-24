@@ -18,9 +18,9 @@ export default {
                         throw new Error(`invalid ${key}`);
                     }
                 }
-                //const user=await User.add(data);
+                const user=await User.add(data);
                 response.json({
-                    email:data.email,
+                    email:user.email,
                     password:data.password,
                 });
             }

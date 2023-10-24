@@ -7,11 +7,15 @@ import OrderField from "./OrderField.js";
 import FindOrderField from "./FindOrderField.js";
 import FindComplaintField from "./FindComplaintField.js";
 import ComplaintSubjectsField from "./ComplaintSubjectsField.js";
+import LangsField from "./LangsField.js";
+import FindProductsField from "./FindProductsField.js";
 
 
 export default GraphQLObject({
     name:"Querier",
     fields:[
+        FindProductsField,
+        LangsField,
         ComplaintSubjectsField,
         FindComplaintField,
         FindOrderField,

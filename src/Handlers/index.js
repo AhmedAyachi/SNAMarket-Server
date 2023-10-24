@@ -4,7 +4,7 @@ import {Error} from "../Resources/index.js";
 
 export const findUserHandler=async (request,response,next)=>{
     const {throws=true}=response.locals;
-    const {userId,sessionId}=request.cookies;
+    const {userId,sessionId}=request.body;
     try{
         const user=await User.findByIds(userId,sessionId);
         if(user){

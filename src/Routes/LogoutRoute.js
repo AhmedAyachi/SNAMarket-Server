@@ -1,6 +1,4 @@
-import {User} from "../DataBase/index.js";
 import {findUserHandler} from "../Handlers/index.js";
-//import {Error} from "../Resources/index.js";
 
 
 export default {
