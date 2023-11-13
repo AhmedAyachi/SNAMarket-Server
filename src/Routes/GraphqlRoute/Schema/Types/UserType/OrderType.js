@@ -1,5 +1,5 @@
 import {GraphQLString,GraphQLID,GraphQLList} from "graphql";
-import {GraphQLObject,GraphQLDate,GrapthQLTime} from "graphqlutils";
+import {GraphQLObject,GraphQLDate,GrapthQLTime} from "qlboost";
 import OrderItemType from "./OrderItemType.js";
 
 

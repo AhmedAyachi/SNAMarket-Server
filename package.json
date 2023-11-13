@@ -14,8 +14,8 @@
     "express": "^4.17.3",
     "express-graphql": "^0.12.0",
     "graphql": "^15.8.0",
-    "graphqlutils": "https://github.com/AhmedAyachi/GraphQLUtils#dev",
     "mongodb": "^6.1.0",
+    "qlboost": "^1.0.1",
     "sha256": "^0.2.0",
     "vritra": "^0.0.1"
   },

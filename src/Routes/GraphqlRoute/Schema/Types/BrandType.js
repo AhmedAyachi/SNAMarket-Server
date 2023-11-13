@@ -1,5 +1,5 @@
 import {GraphQLString,GraphQLID} from "graphql";
-import {GraphQLObject} from "graphqlutils";
+import {GraphQLObject} from "qlboost";
 
 
 export default GraphQLObject({

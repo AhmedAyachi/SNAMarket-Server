@@ -1,5 +1,5 @@
 import {GraphQLString,GraphQLID,GraphQLNonNull} from "graphql";
-import {GraphQLObject,GraphQLDate,GrapthQLTime} from "graphqlutils";
+import {GraphQLObject,GraphQLDate,GrapthQLTime} from "qlboost";
 import {Complaint} from "../../../../../DataBase/index.js";
 
 

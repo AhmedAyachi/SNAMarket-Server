@@ -1,5 +1,5 @@
 import {isEmail} from "vritra";
-import GraphQLUtils from "graphqlutils";
+import GraphQLUtils from "qlboost";
 import DataBase,{User} from "../DataBase/index.js";
 
 

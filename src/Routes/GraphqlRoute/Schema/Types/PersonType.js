@@ -1,6 +1,5 @@
 import {GraphQLString} from "graphql";
-import {GraphQLObject,GraphQLDate} from "graphqlutils";
-import {UserType} from "./index.js";
+import {GraphQLObject,GraphQLDate} from "qlboost";
 
 
 export default GraphQLObject({
@@ -12,7 +11,6 @@ export default GraphQLObject({
             required:true,
             prettify:true,
         }),
-        user:{type:UserType},
         countryId:{type:GraphQLString},
     }),
 });

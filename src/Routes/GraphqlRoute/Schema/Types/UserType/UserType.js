@@ -1,9 +1,9 @@
 import {GraphQLString,GraphQLID} from "graphql";
 import {PersonType} from "../index.js";
-import {GraphQLExtendType} from "graphqlutils";
+import {extendObjectType} from "qlboost";
 
 
-export default GraphQLExtendType(()=>PersonType,{
+export default extendObjectType(()=>PersonType,{
     name:"User",
     fields:()=>({
         id:{type:GraphQLID},

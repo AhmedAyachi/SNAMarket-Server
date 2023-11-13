@@ -1,4 +1,4 @@
-import {GraphQLObject} from "graphqlutils";
+import {GraphQLObject} from "qlboost";
 import {GraphQLInt,GraphQLString,GraphQLNonNull,GraphQLID,GraphQLObjectType} from "graphql";
 
 
