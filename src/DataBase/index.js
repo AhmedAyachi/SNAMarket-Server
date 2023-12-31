@@ -4,12 +4,17 @@ import {MongoClient} from "mongodb";
 export * from "./User/index.js";
 export {default as Product} from "./Product.js";
 
+
 const DataBase={
-    connect:()=>MongoClient.connect("mongodb://localhost:27017/SNAMarket").
-    then(client=>{
-        DataBase.connection=client.db();
-        console.log("connected to database");
-        return DataBase.connection;
+    connect:()=>fetch(DB_URL,{method:"POST"}).
+    then(response=>response.json()).
+    then(data=>{
+        const {status}=data;
+        if(status==="ready"){
+            console.log("connected to database"); 
+        }
+        else throw Error("unable to connect to DataBase Server.");
+        return DataBase;
     }).
     catch(error=>{
         console.log(error);

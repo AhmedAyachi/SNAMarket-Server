@@ -6,7 +6,7 @@ import * as routes from "./Routes/index.js";
 import DataBase from "./DataBase/index.js";
 import {Error} from "./Resources/index.js";
 
-
+global.DB_URL="http://localhost:8080";
 DataBase.connect().then(connection=>{
     const app=express();
     app.use(bodyParser.json());

@@ -74,8 +74,10 @@ export default class User extends Person {
     static async findByCredentials(email,password){
         let user=null;
         if(email&&User.isValidPassword(password)){
-            const hash=getUserHash(email,password);
-            user=await DataBase.userCollection.findOne({hash});//alexhunter7482 ajdkhuf295472ad82
+            user=await fetch(DB_URL,{body:JSON.stringify({
+                call:"findByCredentials",
+                data:{email,password},
+            })});
             if(user){user=new User(user)};
         }
         return user;
