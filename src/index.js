@@ -7,6 +7,7 @@ import DataBase from "./DataBase/index.js";
 import {Error} from "./Resources/index.js";
 
 
+console.log("Connecting to Database");
 DataBase.connect().then(connection=>{
     const app=express();
     app.use(bodyParser.json());
