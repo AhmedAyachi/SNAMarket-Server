@@ -1,14 +1,25 @@
 import {MongoClient} from "mongodb";
+import * as data from "./Data/index.js";
+import {capitalize} from "vritra";
 
 
 export * from "./User/index.js";
 export {default as Product} from "./Product.js";
 
 const DataBase={
-    connect:()=>MongoClient.connect("mongodb://localhost:27017/SNAMarket").
-    then(client=>{
-        DataBase.connection=client.db();
-        console.log("connected to database");
+    name:"SNAMarket",
+    connect:()=>MongoClient.connect("mongodb://db-container:27017").
+    then(async (client)=>{
+        let connection=client.db(DataBase.name);
+        await connection.dropDatabase();
+        connection=DataBase.connection=client.db(DataBase.name);
+        console.log("database reset successfully");
+        for(const key in data){
+            const collectionName=capitalize(key);
+            console.log(`creating ${collectionName} collection`);
+            const collection=await connection.createCollection(collectionName);
+            await collection.insertMany(data[key]);
+        }
         return DataBase.connection;
     }).
     catch(error=>{

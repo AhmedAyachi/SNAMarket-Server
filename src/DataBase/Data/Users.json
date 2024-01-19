@@ -1,7 +1,4 @@
 [{
-  "_id": {
-    "$oid": "6536f3ee93bae430a25f1bb0"
-  },
   "name": "alex hunter",
   "email": "alexhunter566@gmail.com",
   "birthdate": "20/10/2023",
@@ -13,9 +10,7 @@
   "orders": [
     {
       "id": "ds55vh9g322vfna0l8mlg",
-      "datetime": {
-        "$numberLong": "1698100287898"
-      },
+      "datetime":1698100287898,
       "statusCode": "p",
       "items": [
         {
@@ -39,9 +34,7 @@
     {
       "id": "ji84gl3sl4strmlotf6a2q",
       "subject": "dlv",
-      "datetime": {
-        "$numberLong": "1698100308397"
-      },
+      "datetime": 1698100308397,
       "orderId": "ds55vh9g322vfna0l8mlg",
       "body": "onz,kz"
     }
@@ -50,13 +43,9 @@
     {
       "id": "9kf1nid3153riz2k6b8lk",
       "deviceId": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.61",
-      "birthDateTime": {
-        "$numberLong": "1698100263510"
-      },
+      "birthDateTime":1698100263510,
       "terminated": true,
-      "expiryDateTime": {
-        "$numberLong": "1698100340936"
-      }
+      "expiryDateTime": 1698100340936
     }
   ]
 }]

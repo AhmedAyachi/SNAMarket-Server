@@ -1,7 +1,4 @@
 [{
-  "_id": {
-    "$oid": "6536a0b19d5e9f26e2c91287"
-  },
   "_code": "fr",
   "_name": "français",
   "complaintsubmitted": "réclamation soumise",
@@ -79,9 +76,6 @@
   "registrationsuccessful": "inscription réussi"
 },
 {
-  "_id": {
-    "$oid": "6536a1dd9d5e9f26e2c91289"
-  },
   "_code": "en",
   "_name": "english",
   "complaintsubmitted": "complaint submitted",

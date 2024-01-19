@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+    mongodb:
+        container_name: db-container
+        image: mongo:latest
+        restart: always
+        volumes:
+            - mongodb:/data/db
+    server:
+        container_name: app-server
+        image: ahmedayachi/snamarket-server:latest
+        ports:
+            - 4000:4000
+        depends_on: 
+            - mongodb
+volumes:
+    mongodb: {}
