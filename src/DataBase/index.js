@@ -15,7 +15,7 @@ const DataBase={
         connection=DataBase.connection=client.db(DataBase.name);
         console.log("database reset successfully");
         for(const key in data){
-            const collectionName=capitalize(key);
+            const collectionName=key==="producttypes"?"ProductTypes":capitalize(key);
             console.log(`creating ${collectionName} collection`);
             const collection=await connection.createCollection(collectionName);
             await collection.insertMany(data[key]);

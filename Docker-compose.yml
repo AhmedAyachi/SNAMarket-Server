@@ -13,5 +13,12 @@ services:
             - 4000:4000
         depends_on: 
             - mongodb
+    client:
+        container_name: app-client
+        image: ahmedayachi/snamarket-client:latest
+        ports:
+            - 3000:3000
+        depends_on:
+            - server
 volumes:
     mongodb: {}
